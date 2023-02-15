@@ -19,6 +19,7 @@ jobs:
           go mod download
     - run:
         name: "Run Acceptance Tests"
+        no_output_timeout: 30m
         command: |
           source ~/.bashrc
           make testacc-ci
